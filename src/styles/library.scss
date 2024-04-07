@@ -1,0 +1,82 @@
+.library {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20rem;
+    height: 100%;
+    background: rgb(238, 238, 238);
+    box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.205);
+    overflow: scroll;
+    transform: translateX(-100%);
+    transition: all 0.2s ease;
+    opacity: 0;
+    h2 {
+        padding: 2rem;
+        color: black; /* Default text color */
+    }
+}
+
+.library-song {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem 1rem 2rem;
+    img {
+        width: 30%;
+    }
+    &:hover {
+        background: rgb(218, 235, 255);
+    }
+}
+
+.song-description {
+    padding-left: 1rem;
+    h3 {
+        font-size: 1rem;
+    }
+    h4 {
+        color: gray;
+        font-size: 0.7rem;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(255, 183, 183);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(221, 221, 221);
+}
+
+.selected {
+    background: rgb(255, 230, 255);
+}
+
+.active {
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+/* Media Query */
+@media screen and (max-width: 768px) {
+    .library {
+        width: 100%;
+    }
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: black;
+    color: white; /* Default text color in dark mode */
+}
+
+/* Change text color to white when dark mode is activated */
+.dark-mode .library h2,
+.dark-mode .library-song h3,
+.dark-mode .library-song h4 {
+    color: black;
+}

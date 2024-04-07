@@ -1,0 +1,50 @@
+nav {
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+        background: transparent;
+        border: none;
+        border: 2px solid rgb(65, 65, 65);
+        transition: all 0.3 ease;
+        padding: 20px;
+        margin: 20px;
+        font-size: 30px;
+        font-weight: bold;
+        &:hover {
+            color: white;
+            background: rgb(65, 65, 65);
+        }
+    }
+}
+/* Responsive */
+    @media screen and (max-width: 768px) {
+        nav {
+        button {
+            z-index: 10;
+        }
+    }
+}
+
+.songs {
+    padding: 20px;
+    margin: 20px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.darkMode {
+    font-size: 20px;
+        position: relative;
+        display: inline;
+        text-align:end;
+        height: 2em;
+        padding: 50px;
+}
